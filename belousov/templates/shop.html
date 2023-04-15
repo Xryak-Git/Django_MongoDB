@@ -1,0 +1,155 @@
+{% extends 'base-page.html' %}
+{% load static %}
+
+{% block title %}
+    Shop
+{% endblock title %}
+
+{% block container %}
+
+        <div class="create_new">
+            <div class="price">Цена</div>
+            <div class="discription">Описание</div>
+            <div class="product_img">Картинка</div>
+
+        </div>
+
+		<main class="content">
+
+			<div class="title hellow">
+				<p>
+					Привет, купи мой товар. Это очень поможет
+				</p>
+			</div>
+			<div class="tovar">
+
+				<ul class="products clearfix">
+					<li class="product-wrapper">
+
+						<!-- Карточка товара -->
+						<div class="card">
+						  <!-- Верхняя часть -->
+						  <div class="card__top">
+						    <!-- Изображение-ссылка товара -->
+						    <a href="#" class="card__image">
+						      <img
+						        src="{% static 'images/1.jpeg' %}"
+						        alt=""
+						      />
+						    </a>
+						  </div>
+						  <!-- Нижняя часть -->
+						  <div class="card__bottom">
+						    <!-- Цены на товар (с учетом скидки и без)-->
+						    <div class="card__prices">
+						      <div class="card__price card__price--common">150 000</div>
+						    </div>
+						    <!-- Ссылка-название товара -->
+						    <a href="#" class="card__title">
+						      Смартфон Apple IPhone 14 Pro Max 256Gb, золотой
+						    </a>
+						    <!-- Кнопка добавить в корзину -->
+						    <button class="card__add">В корзину</button>
+						  </div>
+						</div>
+
+					</li>
+					<li class="product-wrapper">
+
+						<!-- Карточка товара -->
+						<div class="card">
+						  <!-- Верхняя часть -->
+						  <div class="card__top">
+						    <!-- Изображение-ссылка товара -->
+						    <a href="#" class="card__image">
+						      <img
+						        src="{% static 'images/3.jpg' %}"
+						        alt=""
+						      />
+						    </a>
+						  </div>
+						  <!-- Нижняя часть -->
+						  <div class="card__bottom">
+						    <!-- Цены на товар (с учетом скидки и без)-->
+						    <div class="card__prices">
+						      <div class="card__price card__price--common">150 000</div>
+						    </div>
+						    <!-- Ссылка-название товара -->
+						    <a href="#" class="card__title">
+						      Смартфон Apple IPhone 14 Pro Max 256Gb, золотой
+						    </a>
+						    <!-- Кнопка добавить в корзину -->
+						    <button class="card__add">В корзину</button>
+						  </div>
+						</div>
+
+					</li>
+					<li class="product-wrapper">
+						<!-- Карточка товара -->
+						<div class="card">
+						  <!-- Верхняя часть -->
+						  <div class="card__top">
+						    <!-- Изображение-ссылка товара -->
+						    <a href="#" class="card__image">
+						      <img
+						        src="{% static 'images/2.jpg' %}"
+						        alt=""
+						      />
+						    </a>
+						  </div>
+						  <!-- Нижняя часть -->
+						  <div class="card__bottom">
+						    <!-- Цены на товар (с учетом скидки и без)-->
+						    <div class="card__prices">
+						      <div class="card__price card__price--common">150 000</div>
+						    </div>
+						    <!-- Ссылка-название товара -->
+						    <a href="#" class="card__title">
+						      Смартфон Apple IPhone 14 Pro Max 256Gb, золотой
+						    </a>
+						    <!-- Кнопка добавить в корзину -->
+						    <button class="card__add">В корзину</button>
+						  </div>
+						</div>
+					</li>
+
+
+                    {% for product in products %}
+
+                        <li class="product-wrapper">
+                            <!-- Карточка товара -->
+                            <div class="card">
+                              <!-- Верхняя часть -->
+                              <div class="card__top">
+                                <!-- Изображение-ссылка товара -->
+                                <a href="#" class="card__image">
+                                  <img
+                                    src="{% static 'images/2.jpg' %}"
+                                    alt=""
+                                  />
+                                </a>
+                              </div>
+                              <!-- Нижняя часть -->
+                              <div class="card__bottom">
+                                <!-- Цены на товар (с учетом скидки и без)-->
+                                <div class="card__prices">
+                                  <div class="card__price card__price--common">{{ product.price }}</div>
+                                </div>
+                                <!-- Ссылка-название товара -->
+                                <a href="#" class="card__title">
+                                  {{ product.title }}
+                                </a>
+                                <!-- Кнопка добавить в корзину -->
+                                <button class="card__add">В корзину</button>
+                              </div>
+                            </div>
+                        </li>
+
+                    {% endfor %}
+				</ul>
+
+
+			</div>
+
+		</main>
+{% endblock container %}

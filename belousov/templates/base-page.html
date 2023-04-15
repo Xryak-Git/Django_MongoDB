@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{% block title %} {% endblock title %}</title>
+	<link rel="stylesheet" href="{% static 'css/css.css' %}">
+</head>
+<body>
+	<div class="wrapper">
+		<header class="header">
+
+			<div class = "title"><p>Магазинчик Хряка</p></div>
+			<nav class="navigation">
+				<ul class="menu">
+					<li class="page"><a href="/" class="page_link">Главная</a></li>
+					<li class="page"><a href="{% url 'shop' %}" class="page_link">Магазин</a></li>
+					<li class="page"><a href="" class="page_link">Корзина</a></li>
+				</ul>
+			</nav>
+
+		</header>
+
+        <!-- ##################################### -->
+
+        {% block container %}
+
+        {% endblock container %}
+
+        <!-- ##################################### -->
+
+
+        <!-- <footer class="footer">
+			    <p class="thanks">Спасибо, что прочел</p>
+		     </footer>
+		-->
+
+	</div>
+</body>
+</html>
