@@ -64,7 +64,6 @@ a, u {
 
 .product-wrapper {
 	display: block;
-	width: 100%;
 	transition: width .2s;
 	width: 25%;
 }
@@ -253,4 +252,14 @@ a, u {
   border: 1px solid #ff6633;
   background-color: #ff6633;
   color: #fff;
+}
+
+.tovar{
+    display: flex;
+}
+
+ul.products.clearfix {
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
 }

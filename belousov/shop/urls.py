@@ -22,6 +22,6 @@ from . import views
 urlpatterns = [
     path('', views.shop, name='shop'),
     path('addproduct', views.addproduct, name='addproduct'),
-path('<int:id>', views.shop, name='shop'),
+
 
 ]
