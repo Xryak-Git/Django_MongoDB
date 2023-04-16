@@ -3,9 +3,9 @@ body{
 }
 header{
 	width: 100%;
-	
+
 	background-color: #DCD7E9;
-	
+
 }
 
 a, u {
@@ -65,7 +65,6 @@ a, u {
 .product-wrapper {
 	display: block;
 	width: 100%;
-	float: left;
 	transition: width .2s;
 	width: 25%;
 }
@@ -95,7 +94,7 @@ a, u {
 }
 
 .product-photo img {
-	
+
 	top: 0;
 	bottom: 0;
 	left: 0;

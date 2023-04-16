@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Product
 from .forms import ProductForm
 
@@ -11,7 +11,18 @@ def shop(request):
     return render(request, 'shop.html', {'products': products})
 
 
+
+
 def addproduct(request):
+    error = ''
+    if request.method == 'POST':
+        form = ProductForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('shop')
+        else:
+            error = 'Чо-то неправильно'
+
 
 
     add_form = ProductForm()
