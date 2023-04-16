@@ -1,0 +1,26 @@
+{% extends 'base-page.html' %}
+{% load static %}
+
+{% block title %}
+    Добавить новую запись
+{% endblock title %}
+
+{% block container %}
+
+        <div class="create_new">
+            Добавить запись
+
+            <form method="post">
+                {% csrf_token %}
+
+                {{ add_form.title }}<br>
+                {{ add_form.price }}<br>
+                {{ add_form.date }}<br>
+
+                <button type='submit'>Добавить</button>
+            </form>
+        
+
+        </div>
+
+{% endblock container %}
