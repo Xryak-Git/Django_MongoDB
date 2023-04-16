@@ -1,0 +1,17 @@
+{% extends 'base-page.html' %}
+{% load static %}
+
+{% block title %}
+    Посмотреть продуктик
+{% endblock title %}
+
+{% block container %}
+
+    <h1>{{ product.title }}</h1>
+    <h1>{{ product.price }}</h1>
+    <h1>{{ product.date }}</h1>
+
+    <a href='{% url "update-product" product.id %}'><button>Отредактировать</button></a>
+
+
+{% endblock container %}

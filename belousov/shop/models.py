@@ -1,6 +1,6 @@
 from datetime import datetime
-
 from django.db import models
+
 
 # Create your models here.
 
@@ -13,3 +13,6 @@ class Product(models.Model):
 
     def __str__(self):
         return f'{self.title} | {self.price} | {self.date}'
+
+    def get_absolute_url(self): # Тут мы создали новый метод
+        return f'/shop/{self.id}'

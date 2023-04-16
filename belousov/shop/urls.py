@@ -21,7 +21,9 @@ from . import views
 
 urlpatterns = [
     path('', views.shop, name='shop'),
-    path('addproduct', views.addproduct, name='addproduct'),
-
+    path('add-product', views.add_product, name='add-product'),
+    path('<int:pk>/update', views.UpdateProduct.as_view(), name='update-product'),
+    path('<int:pk>', views.DetailProduct.as_view(), name='detail-product'),
+    path('<int:pk>/delete', views.DeleteProduct.as_view(), name='delete-product'),
 
 ]

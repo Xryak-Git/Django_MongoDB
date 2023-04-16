@@ -7,7 +7,7 @@
 
 {% block container %}
 
-    <a href="{% url 'addproduct' %}"><button>Добавить Хабарчик</button></a>
+    <a href="{% url 'add-product' %}"><button>Добавить Хабарчик</button></a>
 
 		<main class="content">
 
@@ -117,7 +117,7 @@
                               <!-- Верхняя часть -->
                               <div class="card__top">
                                 <!-- Изображение-ссылка товара -->
-                                <a href="#" class="card__image">
+                                <a href="{% url 'detail-product' product.id %}" class="card__image">
                                   <img
                                     src="{% static 'images/2.jpg' %}"
                                     alt=""
