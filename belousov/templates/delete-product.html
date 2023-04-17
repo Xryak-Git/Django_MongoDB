@@ -1,0 +1,23 @@
+{% extends 'base-page.html' %}
+{% load static %}
+
+{% block title %}
+    Удаление продукта
+{% endblock title %}
+
+{% block container %}
+
+        <div class="create_new">
+            Удалить продукт
+
+            <form method="post">
+                {% csrf_token %}
+                <button type='submit'>Удалить продукт</button>
+            </form>
+
+        <h2>Фоточка:</h2><br>
+        <img src="{{ product.image.url }}" alt="Картиночка" style="width: 250px; height: 250px"><br>
+
+        </div>
+
+{% endblock container %}

@@ -9,7 +9,7 @@ class Product(models.Model):
     title = models.CharField('Название', max_length=20, default='Хабарчик')
     price = models.IntegerField('Цена', default=0)
     date = models.DateTimeField('Дата публикации', auto_now_add=False, blank=True, default=datetime.now())
-    #img =
+    image = models.ImageField(upload_to='images', default='images/1.jpeg')
 
     def __str__(self):
         return f'{self.title} | {self.price} | {self.date}'

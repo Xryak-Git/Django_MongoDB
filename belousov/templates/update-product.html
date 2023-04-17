@@ -10,14 +10,15 @@
         <div class="create_new">
             Обновить запись
 
-            <form action="" method="post">
+            <form action="" method="POST" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ form.as_p }}
 
                 <button type='submit' >Обновить</button>
             </form>
 
-
+        <h2>Текущая фоточка:</h2><br>
+        <img src="{{ product.image.url }}" alt="Картиночка" style="width: 250px; height: 250px"><br>
 
         </div>
 

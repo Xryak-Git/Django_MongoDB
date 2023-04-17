@@ -18,7 +18,6 @@ from django.contrib import admin
 from django.urls import path, include
 from . import views
 
-
 urlpatterns = [
     path('', views.shop, name='shop'),
     path('add-product', views.add_product, name='add-product'),

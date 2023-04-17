@@ -10,8 +10,12 @@
     <h1>{{ product.title }}</h1>
     <h1>{{ product.price }}</h1>
     <h1>{{ product.date }}</h1>
+    <img src="{{ product.image.url }}" alt="Картиночка" style="width: 250px; height: 250px"><br>
+
+
 
     <a href='{% url "update-product" product.id %}'><button>Отредактировать</button></a>
+    <a href='{% url "delete-product" product.id %}'><button>Удалить</button></a>
 
 
 {% endblock container %}

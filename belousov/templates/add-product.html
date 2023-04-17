@@ -10,12 +10,13 @@
         <div class="create_new">
             Добавить запись
 
-            <form method="post">
+            <form method="POST" enctype="multipart/form-data">
                 {% csrf_token %}
 
                 {{ add_form.title }}<br>
                 {{ add_form.price }}<br>
                 {{ add_form.date }}<br>
+                {{ add_form.image }}<br>
 
                 <button type='submit'>Добавить</button>
             </form>

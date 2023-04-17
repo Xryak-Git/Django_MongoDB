@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import Product
 from .forms import ProductForm
-from django.views.generic import UpdateView, DetailView
+from django.views.generic import UpdateView, DetailView, DeleteView
 
 
 # Create your views here.
@@ -19,11 +19,11 @@ class UpdateProduct(UpdateView):
     form_class = ProductForm
 
 
-class DeleteProduct(UpdateView):
+class DeleteProduct(DeleteView):
     model = Product
     template_name = 'delete-product.html'
 
-    form_class = ProductForm
+    success_url = '/shop/'
 
 
 def shop(request):
@@ -34,7 +34,7 @@ def shop(request):
 def add_product(request):
     error = ''
     if request.method == 'POST':
-        form = ProductForm(request.POST)
+        form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
             return redirect('shop')

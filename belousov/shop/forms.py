@@ -5,7 +5,7 @@ from django.forms import ModelForm, TextInput, NumberInput, DateTimeInput
 class ProductForm(ModelForm):
     class Meta:
         model = Product
-        fields = ['title', 'price', 'date']
+        fields = ['title', 'price', 'date', 'image']
 
         widgets = {
             'title': TextInput(attrs={
