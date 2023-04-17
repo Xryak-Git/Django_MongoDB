@@ -27,7 +27,7 @@ class DeleteProduct(DeleteView):
 
 
 def shop(request):
-    products = Product.objects.order_by('-date')
+    products = Product.objects.order_by('date')
     return render(request, 'shop.html', {'products': products})
 
 

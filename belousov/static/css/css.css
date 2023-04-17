@@ -66,6 +66,7 @@ a, u {
 	display: block;
 	transition: width .2s;
 	width: 25%;
+    margin-bottom: 50px;
 }
 
 .product {
@@ -262,4 +263,5 @@ ul.products.clearfix {
     display: flex;
     justify-content: start;
     flex-wrap: wrap;
+    width: 100%;
 }
